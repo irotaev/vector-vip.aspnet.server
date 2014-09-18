@@ -220,7 +220,7 @@ pip-log.txt
 #############
 
 WebServer/bin/
-WebServer/Web.config
+#WebServer/Web.config
 WebServer/Content/.sass-cache/
 WebServer/Content/.sass-cache/
 WebServer/Content/stylesheets/
