@@ -224,9 +224,12 @@ WebServer/bin/
 WebServer/Content/.sass-cache/
 WebServer/Content/.sass-cache/
 WebServer/Content/stylesheets/
+WebServer/bower_components/
 .idea/
 Content/.idea
 WebServer/Content/.idea
 WebServer/Uploads
 Content/stylesheets/
 Logic/bin/
+WebServer/Scripts/**/*.js
+WebServer/Scripts/**/*.js.map

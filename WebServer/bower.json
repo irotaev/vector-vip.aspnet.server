@@ -1,0 +1,24 @@
+{
+  "name": "bower_components",
+  "version": "0.0.1",
+  "homepage": "https://github.com/irotaev/vector-vip.aspnet.server",
+  "authors": [
+    "Andrey <iroatev@gmail.com>"
+  ],
+  "description": "Проект клиента vector-vip",
+  "keywords": [
+    "client",
+    "server"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": { 
+    "angular": "1.2.25"
+  }
+}
