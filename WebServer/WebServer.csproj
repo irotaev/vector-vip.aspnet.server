@@ -97,6 +97,7 @@
     <Content Include="bower_components\angular\angular.min.js.map" />
     <Content Include="bower_components\angular\bower.json" />
     <Content Include="bower_components\angular\README.md" />
+    <Content Include="Content\Controls\MainLayout\Html\_MainLayout.cshtml" />
     <None Include="Scripts\jquery-2.1.1-vsdoc.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
@@ -130,10 +131,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\Controls\MainLayout\CSS\" />
     <Folder Include="Content\scss\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Content\Controls\MainLayout\JavaScript\MainLayout.ts" />
+    <TypeScriptCompile Include="Scripts\Framework\Framework.ts" />
     <TypeScriptCompile Include="Scripts\Framework\requireJsInit.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Home.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
@@ -146,6 +150,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptModuleKind>amd</TypeScriptModuleKind>
+    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
