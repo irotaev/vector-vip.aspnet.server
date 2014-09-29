@@ -231,5 +231,5 @@ WebServer/Content/.idea
 WebServer/Uploads
 Content/stylesheets/
 Logic/bin/
-WebServer/Scripts/**/*.js
-WebServer/Scripts/**/*.js.map
+WebServer/Scripts/*/**/*.js
+WebServer/Scripts/*/**/*.js.map
