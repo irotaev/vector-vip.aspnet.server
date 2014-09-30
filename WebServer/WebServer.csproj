@@ -87,18 +87,16 @@
     <Content Include="bower_components\angular\angular-csp.css" />
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />
-    <Content Include="Content\stylesheets\ie.css" />
-    <Content Include="Content\stylesheets\Pages\Home.css" />
-    <Content Include="Content\stylesheets\print.css" />
-    <Content Include="Content\stylesheets\screen.css" />
+    <Content Include="Content\sass\Pages\Home.css" />
     <Content Include="Global.asax" />
     <Content Include="bower_components\angular\.bower.json" />
     <Content Include="bower_components\angular\angular.min.js.gzip" />
     <Content Include="bower_components\angular\angular.min.js.map" />
     <Content Include="bower_components\angular\bower.json" />
     <Content Include="bower_components\angular\README.md" />
-    <Content Include="Content\Controls\MainLayout\Html\_MainLayout.cshtml" />
+    <Content Include="Content\Controls\MainLayout\Html\MainLayout.html" />
     <None Include="Scripts\jquery-2.1.1-vsdoc.js" />
+    <Content Include="Scripts\Framework\requireJsInit.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
     <Content Include="Scripts\r.js" />
@@ -132,7 +130,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\Controls\MainLayout\CSS\" />
-    <Folder Include="Content\scss\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +137,15 @@
     <TypeScriptCompile Include="Scripts\Framework\Framework.ts" />
     <TypeScriptCompile Include="Scripts\Framework\requireJsInit.ts" />
     <TypeScriptCompile Include="Scripts\Pages\Home.ts" />
+    <TypeScriptCompile Include="Scripts\Pages\HomeInit.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-resource.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-route.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-sanitize.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular-scenario.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\angularjs\angular.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\jquery\jquery.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
   </ItemGroup>
@@ -150,7 +156,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
     <TypeScriptModuleKind>amd</TypeScriptModuleKind>
-    <TypeScriptGeneratesDeclarations>True</TypeScriptGeneratesDeclarations>
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

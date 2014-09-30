@@ -1,8 +1,11 @@
 ﻿/// <reference path="../typings/jquery/jquery.d.ts" />
+/// <reference path="../typings/angularjs/angular.d.ts" />
 
 /// <amd-dependency path="jquery"/>
+/// <amd-dependency path="angular"/>
 
 $ = require('jquery');
+angular = require('angular');
 
 export interface IAbstractControl
 {
@@ -10,7 +13,7 @@ export interface IAbstractControl
 
 export class AbstractControl implements IAbstractControl
 {
-  constructor(public _controlName: string)
+  constructor(public _controlName: string, public _angularModule: ng.IModule)
   {
   }
 
@@ -26,7 +29,7 @@ export class AbstractControl implements IAbstractControl
     var defferer = $.Deferred<string>();
 
     $.ajax({
-      url: '/Content/Controls/' + this._controlName + 'Html/' + viewName,
+      url: '/Content/Controls/' + this._controlName + '/Html/' + viewName,
       type: 'GET'
     }).done((viewContent: string) =>
     {
