@@ -10,6 +10,6 @@ export module HomeInit
 {
   $(function () 
   {
-    new MainLayout.MainLayout($('body')).GetHtmlView('MainLayout.html');
+    new MainLayout.MainLayoutControl($('body'));
   });
 }

@@ -7,36 +7,37 @@ var __extends = this.__extends || function (d, b) {
     __.prototype = b.prototype;
     d.prototype = new __();
 };
-define(["require", "exports", '../../../../Scripts/Framework/Framework', "jquery", "angular"], function(require, exports, Framework) {
+define(["require", "exports", '../../../../Scripts/Framework/Framework', "jquery", "angular", "angular_route"], function(require, exports, Framework) {
     /// <amd-dependency path="jquery"/>
     /// <amd-dependency path="angular"/>
+    /// <amd-dependency path="angular_route"/>
     $ = require('jquery');
     angular = require('angular');
 
     /**
     * Контрол главного шаблона страницы
     */
-    var MainLayout = (function (_super) {
-        __extends(MainLayout, _super);
-        function MainLayout(_parentLayout) {
+    var MainLayoutControl = (function (_super) {
+        __extends(MainLayoutControl, _super);
+        function MainLayoutControl(_parentLayout) {
             var _this = this;
-            _super.call(this, 'MainLayout', angular.module('mainLayout'));
-            this._parentLayout = _parentLayout;
+            _super.call(this, 'MainLayout', angular.module('mainLayout', ['ngRoute']), _parentLayout);
 
-            this._angularModule.controller('mainLayoutController', function (a) {
-                _this.mainLayoutController(a);
+            //#region Инийиализация контроллеров
+            this._angularModule.controller('mainLayoutController', function ($scope) {
+                _this.mainLayoutController($scope);
             });
+            //#endregion
         }
         //#region Angular controllers
         /**
         * Верхний контроллер для данного можуля
+        * @param $scope Angular scope
         */
-        MainLayout.prototype.mainLayoutController = function (a) {
-            console.log(this);
-            console.log(a);
+        MainLayoutControl.prototype.mainLayoutController = function ($scope) {
         };
-        return MainLayout;
+        return MainLayoutControl;
     })(Framework.AbstractControl);
-    exports.MainLayout = MainLayout;
+    exports.MainLayoutControl = MainLayoutControl;
 });
 //# sourceMappingURL=MainLayout.js.map

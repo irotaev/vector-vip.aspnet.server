@@ -13,8 +13,14 @@ export interface IAbstractControl
 
 export class AbstractControl implements IAbstractControl
 {
-  constructor(public _controlName: string, public _angularModule: ng.IModule)
-  {
+  constructor(public _controlName: string, public _angularModule: ng.IModule, private _parentLayout: JQuery)
+  {    
+    this.GetHtmlView(_controlName + '.html').then((content: string) =>
+    {
+      var $content = $(content).appendTo(_parentLayout);           
+
+      angular.bootstrap($content[0], ['mainLayout']);
+    });
   }
 
   /**
@@ -33,13 +39,9 @@ export class AbstractControl implements IAbstractControl
       type: 'GET'
     }).done((viewContent: string) =>
     {
-      console.log(viewContent);
-
       defferer.resolve(viewContent);
     }).fail((error) =>
     {
-      console.log(error);
-
       defferer.fail();
     });
 

@@ -84,6 +84,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bower_components\angular-route\angular-route.js" />
+    <Content Include="bower_components\angular-route\angular-route.min.js" />
     <Content Include="bower_components\angular\angular-csp.css" />
     <Content Include="bower_components\angular\angular.js" />
     <Content Include="bower_components\angular\angular.min.js" />
@@ -95,6 +97,11 @@
     <Content Include="bower_components\angular\bower.json" />
     <Content Include="bower_components\angular\README.md" />
     <Content Include="Content\Controls\MainLayout\Html\MainLayout.html" />
+    <Content Include="bower.json" />
+    <Content Include="bower_components\angular-route\.bower.json" />
+    <Content Include="bower_components\angular-route\angular-route.min.js.map" />
+    <Content Include="bower_components\angular-route\bower.json" />
+    <Content Include="bower_components\angular-route\README.md" />
     <None Include="Scripts\jquery-2.1.1-vsdoc.js" />
     <Content Include="Scripts\Framework\requireJsInit.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />

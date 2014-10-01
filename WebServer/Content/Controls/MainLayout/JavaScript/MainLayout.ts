@@ -4,6 +4,7 @@
 
 /// <amd-dependency path="jquery"/>
 /// <amd-dependency path="angular"/>
+/// <amd-dependency path="angular_route"/>
 
 $ = require('jquery');
 angular = require('angular');
@@ -12,23 +13,24 @@ import Framework = require('../../../../Scripts/Framework/Framework');
 /**
  * Контрол главного шаблона страницы
  */
-export class MainLayout extends Framework.AbstractControl
+export class MainLayoutControl extends Framework.AbstractControl
 {
-  constructor(private _parentLayout: JQuery)
-  {
-    super('MainLayout', angular.module('mainLayout'));
+  constructor(_parentLayout: JQuery)
+  {    
+    super('MainLayout', angular.module('mainLayout', ['ngRoute']), _parentLayout);
 
-    this._angularModule.controller('mainLayoutController', () => { this.mainLayoutController(); });
+    //#region Инийиализация контроллеров
+    this._angularModule.controller('mainLayoutController', ($scope) => { this.mainLayoutController($scope); });
+    //#endregion
   }  
 
   //#region Angular controllers
   /**
   * Верхний контроллер для данного можуля
+  * @param $scope Angular scope
   */
-  private mainLayoutController(): void
+  private mainLayoutController($scope: any): void
   {
-    console.log();
-    console.log(this);
   }
   //#endregion
 }
